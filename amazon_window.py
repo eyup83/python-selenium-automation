@@ -27,8 +27,8 @@ def click_apps(context):
 
 @then("Switch to the newly opened window")
 def switch_to_new_window(context):
-    #context.driver.wait.until(EC.new_window_is_opened)
-    sleep(5)
+    context.driver.wait.until(EC.new_window_is_opened)
+    #sleep(5)
     context.new_windows = context.driver.window_handles
     print(context.new_windows)
     for window in context.original_windows:
